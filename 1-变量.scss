@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+$fontSize: 10px; /*定义全局变量，在选择器，函数，混合宏等 外面定义的变量为全局变量*/
+$fontSize: 12px !default;
+
+em{
+  $fontSize:35px; /*定义局部变量*/
+  a{
+    color:$fontSize;
+  }
+}
+
+body {
+  font-size: $fontSize; /*默认变量*/
+}
+
+/***
+什么时候声明变量
+1、该值至少重复出现了两次
+2、该值至少可能会被更新一次
+3、该值所有的表现都与变量有光
+ */
