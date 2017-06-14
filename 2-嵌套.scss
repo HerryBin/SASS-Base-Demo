@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/**
+1、选择器嵌套
+
+HTML 结构如下
+  <header>
+  <nav>
+      <a href=“##”>Home</a>
+      <a href=“##”>About</a>
+      <a href=“##”>Blog</a>
+  </nav>
+  <header>
+ */
+
+nav{
+    a{
+      color:red;
+      /*& 符是对当前选择器的引用*/
+      header & {
+        color:green;
+      }
+    }
+}
+
+/*
+2、属性嵌套
+*/
+
+.box{
+  border:{
+    top:1px solid red;
+    bottom:1px solid green;
+  }
+}
+
+/**
+3、伪元素嵌套
+ */
+.clearfix{
+  &:before{
+    content: '';
+    display: table;
+  }
+}
+
+/***
+1、选择器嵌套最大的问题是使最终的代码难以阅读，需要花费精力计算不同缩进级别下的选择器具体的表现效果
+
+2、选择器越具体，声明语句越冗长，而且对最近选择器的引用（&）也越频繁。
+ */
