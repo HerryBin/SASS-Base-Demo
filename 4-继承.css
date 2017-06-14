@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*
+  @extend” 来继承已存在的类样式块
+  弥补了混合宏的不足之处
+*/
+.btn, .btn-primary, .btn-second {
+  border: 1px solid red; }
+
+.btn-primary {
+  background-color: #f36;
+  color: #fff; }
+
+.btn-second {
+  background-color: #2718ff; }
+
+/*# sourceMappingURL=4-%BC%CC%B3%D0.css.map */
