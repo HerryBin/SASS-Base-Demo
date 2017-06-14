@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/*
+当需要重复使用大段样式时，可以使用混合宏
+*/
+/*
+1、带参数的混合宏,实际调用中，使用@include 调用
+*/
+#btn {
+  /*传入参数，如果不传入参数，则默认调用5px
+    @include btn-border-radius;
+  */
+  border-radius: 3px; }
+
+/*
+传递多个参数可以使用 ... 替代，这个和ES6中很类似
+ */
+.box {
+  box-shadow: 0 0 1px rgba(91, 168, 56, 0.5), 0 0 2px rgba(225, 22, 163, 0.2); }
+
+/*# sourceMappingURL=3-%BB%EC%BA%CF%BA%EA.css.map */

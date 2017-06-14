@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*
+当需要重复使用大段样式时，可以使用混合宏
+*/
+
+/*
+1、带参数的混合宏,实际调用中，使用@include 调用
+*/
+@mixin btn-border-radius($radius:5px){
+  border-radius: $radius;
+}
+
+#btn{
+  /*传入参数，如果不传入参数，则默认调用5px
+    @include btn-border-radius;
+  */
+  @include btn-border-radius(3px);
+}
+
+/*
+传递多个参数可以使用 ... 替代，这个和ES6中很类似
+ */
+
+@mixin box-shadow($shadows...){
+  @if length($shadows)>=1{
+    box-shadow: $shadows;
+  }@else{
+    $shadows:0 0 2px rgba(#FFCCDB,.25);
+    box-shadow: $shadows;
+  }
+}
+
+.box {
+  @include box-shadow(0 0 1px rgba(#5ba838,.5),0 0 2px rgba(#e116a3,.2));
+}
