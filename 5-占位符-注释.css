@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/***
+  %placeHolder 声明的代码，如果不被 @extend 调用，不会产生任何代码，
+  解决了基类造成代码冗余的情形
+ */
+.btn, .block {
+  margin-top: 5px; }
+
+/*# sourceMappingURL=5-%D5%BC%CE%BB%B7%FB-%D7%A2%CA%CD.css.map */

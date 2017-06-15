@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/***
+  %placeHolder 声明的代码，如果不被 @extend 调用，不会产生任何代码，
+  解决了基类造成代码冗余的情形
+ */
+
+%mt5{
+  margin-top:5px;
+}
+
+.btn {
+  @extend %mt5;
+}
+
+.block {
+  @extend %mt5;
+}
