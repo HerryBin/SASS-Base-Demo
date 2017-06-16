@@ -1,0 +1,62 @@
+@charset "UTF-8";
+.block {
+  /*@debug 在 Sass 中是用来调试的，使用了 @debug 指令之后，Sass 代码在编译出错时，
+  在命令终端会输出你设置的提示 Bug:*/
+  display: block; }
+
+/*
+  @for
+  @for $i from <start> through <end>  包括end
+  .................... to  <end> 不包括 end
+*/
+.item-1 {
+  width: 2px; }
+
+.item-2 {
+  width: 4px; }
+
+.item-3 {
+  width: 6px; }
+
+.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+  float: left;
+  margin-left: 10px;
+  margint-right: 10px; }
+
+.span1 {
+  width: 80px; }
+
+.span2 {
+  width: 140px; }
+
+.span3 {
+  width: 200px; }
+
+.span4 {
+  width: 260px; }
+
+.span5 {
+  width: 320px; }
+
+.span6 {
+  width: 380px; }
+
+.span7 {
+  width: 440px; }
+
+.span8 {
+  width: 500px; }
+
+.span9 {
+  width: 560px; }
+
+.span10 {
+  width: 620px; }
+
+.span11 {
+  width: 680px; }
+
+.span12 {
+  width: 740px; }
+
+/*# sourceMappingURL=7-%BF%D8%D6%C6%C3%FC%C1%EE%A3%A81%A3%A9-if-for.css.map */
