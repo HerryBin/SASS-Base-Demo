@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/*
+  1、length($list)
+     返回列表中有几个值（列表参数之间应使用空格隔开）
+
+  2、nth($list,$n)
+     返回指定列表中第$n($n>0)位置的值，其中1代表第一个
+
+  3、join($list1, $list2, $separator)
+     将两个列表连接合并成一个列表,连接两个以上的参数，需要 join(a,jon(b,c))
+     $separator 值有 auto,comma(逗号）,space（空格），如果不指定，默认为auto，
+     则会出现不稳定的连接方式。
+     （1）$list1=(c)，$list2=(a,b)则会根据$list2 中分割的方式连接起来
+      (2) $list=（a,b),$list2=(c,d)，按照 $list 分割方式
+
+  4、append($list, $val, $separator)
+     某个值插入到列表中，并且处于最末位
+
+  5、zip($lists...)
+     将多个列表值转成一个多维的列表
+
+  6、index($list, $value)
+     返回索引，以1 开始，未找到，则返回false
+*/
+
+$listColor:(red green blue yellow);
+.test{
+  width:length($listColor);
+  background-color: nth($listColor,2);
+
+}
+
+.test::after{
+  content: join(blue,red,comma);
+  color:append((green blue),red);
+}
+
+@mixin border{
+  $index:1;
+  @each $var in zip(1px 2px 3px,solid dashed dotted,green blue red){
+    .border#{$index}{
+      border: $var;
+    }
+
+    $index:$index+1;
+  }
+}
+
+@include border;
+
+$resultIndex:index(1px solid red,red);
+@debug $resultIndex;
