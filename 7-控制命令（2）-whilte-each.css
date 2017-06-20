@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/*
+  1、while
+*/
+.while-4 {
+  width: 44px; }
+
+.while-3 {
+  width: 43px; }
+
+.while-2 {
+  width: 42px; }
+
+.while-1 {
+  width: 41px; }
+
+/*
+  2、each
+  @each $var in <list>
+*/
+.author-bio .photo-Jack {
+  background: url("images/Jack.png") no-repeat; }
+.author-bio .photo-Tom {
+  background: url("images/Tom.png") no-repeat; }
+.author-bio .photo-Vivi {
+  background: url("images/Vivi.png") no-repeat; }
+
+/*# sourceMappingURL=7-%BF%D8%D6%C6%C3%FC%C1%EE%A3%A82%A3%A9-whilte-each.css.map */

@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/*
+  1、while
+*/
+
+$types:4;
+
+@while($types>0){
+  .while-#{$types}{
+    width: 40px+$types;
+  }
+  $types:$types - 1;
+}
+
+/*
+  2、each
+  @each $var in <list>
+*/
+
+$listImg: Jack,Tom,Vivi;
+@mixin author-images{
+  @each $author in $listImg{
+    .photo-#{$author}{
+      background:url('images/#{$author}.png') no-repeat;
+    }
+  }
+}
+
+.author-bio{
+  @include author-images;
+}
