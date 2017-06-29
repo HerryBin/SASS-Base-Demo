@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/*
+  1、alpha($args...)
+  获取一个颜色的透明度值
+
+  2、opacify($color, $amount)
+  3、fade_in($color,$amount)
+  对已有颜色透明度做一个加法运算，让颜色更加不透明
+
+  4、transparentize($color, $amount) 和 fade_out()
+     让颜色更加的透明
+*/
+.btn{
+  /*
+    alpha(blue)
+
+    alpha(rgba(blue,.5))
+
+    opacity(blue)
+
+    opacity(rgba(blue,.5))
+
+  */
+  text:alpha(blue);
+  background-color: opacify(#89adde,.15);
+  color:fade_out(blue,.5);
+}
