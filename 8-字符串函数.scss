@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/*
+  1、unquote($string) ：删除字符串中的引号,且只能删除首尾两端的字符串
+
+  2、quote($string) :给字符串添加引号，遇到 除 - _ 两种符号，其他都要用双引号括起
+
+  3、to_upper_case 转为大写
+
+  4、to_lower-case 转小写
+*/
+
+
+.name::before{
+  content: unquote(" 'hello,sass !' ");
+}
+
+.age:after{
+  content: quote(' I say: "Hello,SASS" ');
+}
+
+.test{
+  text:to_upper_case(aaaa);
+}
